@@ -1,14 +1,15 @@
 # uploadImg
 ### 用于PC端的图片上传组件，包含裁剪、压缩功能
 
-> 需要安装的插件
+## 需要安装的插件
+
 #### 1、cropperjs(图片裁剪)
 ` npm install cropperjs `
 
 #### 2、lrz(图片压缩)
 ` npm install lrz `
 
->API
+## API
 
 属性|说明|类型|默认值
 ---|:--:|:--:|---:
@@ -20,13 +21,13 @@ isCrop|是否需要裁剪|Boolean|false
 cropBoxResizable|裁剪框能否改变大小|Boolean|true
 cropBoxMovable|是否可以拖动裁剪框|Boolean|true
 
->Events
+## Events
 
 事件名|说明|返回值
 ---|:--:|---:
 uploadChange|图片上传成功后的回调|imgList
 
->Slot
+## Slot
 
 名称|说明
 ---|---:
