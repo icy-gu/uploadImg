@@ -4,6 +4,7 @@
             <img :src="imgid " alt="" style="width:100%">
         </div>
         <upload-img 
+            :url="uploadUrl"
             :num=1 
             :aspectRatio=1
             :minCropBoxWidth=100
@@ -30,7 +31,8 @@ export default {
     data(){
         return{
             imgid:'',
-            imgName:''
+            imgName:'',
+            uploadUrl:constGlobal.HostActivity + 'uploadImg'
         }
     },
     components:{uploadImg},

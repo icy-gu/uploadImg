@@ -13,6 +13,7 @@
 
 属性|说明|类型|默认值
 ---|:--:|:--:|---:
+url|上传地址|String|
 num|图片上传张数|Number|1
 aspectRatio|图片宽高比|Number|1
 minCropBoxWidth|裁剪框最小宽度|Number|100

@@ -53,6 +53,10 @@ export default {
         };
     },
     props:{
+        url:{
+            type:String,
+            default:''
+        },
         //裁剪框能否改变大小
         cropBoxResizable:{
             type:Boolean,
@@ -121,8 +125,8 @@ export default {
                 }else{
                     var image = new FormData()
                     image.append('avatar', this.$refs.avatarInput.files[0])
-                    var url = constGlobal.HostActivity + 'uploadImg';
-                    http.apiPost(url, image, {
+                    // var url = constGlobal.HostActivity + 'uploadImg';
+                    http.apiPost(this.url, image, {
                         headers: {
                             "Content-Type": "multipart/form-data"
                         }
@@ -153,7 +157,6 @@ export default {
                     reader.readAsDataURL(_this.file); 
                     var image = new FormData()
                     image.append('avatar', this.$refs.avatarInput.files[0])
-                    this.url = constGlobal.HostActivity + 'uploadImg';
                 }
             }
             el.target.value = "";
@@ -198,9 +201,9 @@ export default {
             lrz( file ,{
                 quality:0.8
             } ).then( resData =>{
-                console.log( resData )
-                var url = constGlobal.HostActivity + 'uploadImg';
-                http.apiPost(url, resData.formData, {
+                // console.log( resData )
+                // var url = constGlobal.HostActivity + 'uploadImg';
+                http.apiPost(this.url, resData.formData, {
                     headers: {
                         "Content-Type": "multipart/form-data"
                     }
