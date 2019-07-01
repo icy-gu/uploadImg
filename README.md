@@ -37,6 +37,7 @@ content|图片上传插件中内容的插槽
 ### 代码示例
 ```
 <upload-img 
+    :url="uploadUrl"
     :num=1 
     :aspectRatio=1
     :minCropBoxWidth=100
